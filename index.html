@@ -1,5 +1,1248 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting to Table M</title>
-<meta http-equiv="refresh" content="0; URL=/tablem">
-<link rel="canonical" href="/tablem">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<title>Table M &#8211; FOOD x PHOTOGRAPHY</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//v0.wordpress.com">
+<link rel="dns-prefetch" href="//jetpack.wordpress.com">
+<link rel="dns-prefetch" href="//s0.wp.com">
+<link rel="dns-prefetch" href="//public-api.wordpress.com">
+<link rel="dns-prefetch" href="//0.gravatar.com">
+<link rel="dns-prefetch" href="//1.gravatar.com">
+<link rel="dns-prefetch" href="//2.gravatar.com">
+<link rel="alternate" type="application/rss+xml" title="Table M &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Table M &raquo; Comments Feed" href="/comments/feed/">
+<script type="text/javascript">window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/muschenetz.com\/tablem\/wp-includes\/js\/wp-emoji.js?ver=6.2.2","twemoji":"http:\/\/muschenetz.com\/tablem\/wp-includes\/js\/twemoji.js?ver=6.2.2"}};
+/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {string} set1 Set of Emoji to test.
+	 * @param {string} set2 Set of Emoji to test.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( set1, 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( set2, 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Determines if the browser properly renders Emoji that Twemoji can supplement.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. Added in Unicode 13.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					'🏳️‍⚧️', // as a zero-width joiner sequence
+					'🏳️​⚧️'  // separated by a zero-width space
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					'🇺🇳',       // as the sequence of two code points
+					'🇺​🇳'  // as the two code points separated by a zero-width space
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather a five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					// as the flag sequence
+					'🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+					// with each code point separated by a zero-width space
+					'🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿'
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Why can't we be friends? Everyone can now shake hands in emoji, regardless of skin tone!
+				 *
+				 * To test for Emoji 14.0 support, try to render a new emoji: Handshake: Light Skin Tone, Dark Skin Tone.
+				 *
+				 * The Handshake: Light Skin Tone, Dark Skin Tone emoji is a ZWJ sequence combining 🫱 Rightwards Hand,
+				 * 🏻 Light Skin Tone, a Zero Width Joiner, 🫲 Leftwards Hand, and 🏿 Dark Skin Tone.
+				 *
+				 * 0x1FAF1 == Rightwards Hand
+				 * 0x1F3FB == Light Skin Tone
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0x1FAF2 == Leftwards Hand
+				 * 0x1F3FF == Dark Skin Tone.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					'🫱🏻‍🫲🏿', // as the zero-width joiner sequence
+					'🫱🏻​🫲🏿'  // separated by a zero-width space
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );</script>
+<style type="text/css">@font-face {
+	font-family: 'tangerineregular';
+	src: url('/wp-content/uploads/fonts/1770/tangerine-webfont.woff2') format('woff2'),
+		url('/wp-content/uploads/fonts/1770/tangerine-webfont.woff') format('woff'),
+		url('/wp-content/uploads/fonts/1770/tangerine-webfont.ttf') format('truetype'),
+	font-weight: normal;
+	font-style: normal;
+}</style>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">.has-text-align-justify{text-align:justify;}</style>
+<link rel="stylesheet" id="jetpack-videopress-video-block-view-css" href="/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-videopress/build/block-editor/blocks/video/view.css?minify=false#038;ver=34ae973733627b74a14e" type="text/css" media="all">
+<link rel="stylesheet" id="mediaelement-css" href="/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17" type="text/css" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="/wp-includes/js/mediaelement/wp-mediaelement.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="julia-google-fonts-css" href="//fonts.googleapis.com/css?family=Playfair+Display%3A700%7CLora%3A400%2C700%7CPT+Serif%3A400%2C400i%2C700%2C700i%7CMontserrat%3A300%2C400%2C500%2C600&#038;subset=latin%2Clatin-ext&#038;ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="julia-style-css" href="/wp-content/themes/julia-lite/style.css?ver=1.2.3" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/pages/1165">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/">
+<link rel="shortlink" href="/">
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">.site-title, .site-description-text {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}</style>
+		<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=%2F#038;format=xml">
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Table M">
+<meta property="og:description" content="FOOD x PHOTOGRAPHY">
+<meta property="og:url" content="/">
+<meta property="og:site_name" content="Table M">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:image:alt">
+<meta name="twitter:text:title" content="Home">
+<meta name="twitter:card" content="summary">
+
+<!-- End Jetpack Open Graph Tags -->
+</head>
+
+<body class="home page-template page-template-page-templates page-template-front-page page-template-page-templatesfront-page-php page page-id-1165 wp-custom-logo u-content-background singular u-site-header-sticky u-footer-layout-stacked u-underlined-links site-title-hidden u-full-width-header u-site-header-full-width u-buttons-1 entry-image--none customify" data-parallax data-ajaxloading>
+
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-dark-grayscale">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr>
+					<fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg>
+					<fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-grayscale">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0 1"></fefuncr>
+					<fefuncg type="table" tablevalues="0 1"></fefuncg>
+					<fefuncb type="table" tablevalues="0 1"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-purple-yellow">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr>
+					<fefuncg type="table" tablevalues="0 1"></fefuncg>
+					<fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-blue-red">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0 1"></fefuncr>
+					<fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg>
+					<fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-midnight">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0 0"></fefuncr>
+					<fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg>
+					<fefuncb type="table" tablevalues="0 1"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-magenta-yellow">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr>
+					<fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg>
+					<fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-purple-green">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr>
+					<fefuncg type="table" tablevalues="0 1"></fefuncg>
+					<fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-blue-orange">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr>
+					<fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg>
+					<fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+
+
+<div id="barba-wrapper" class="site u-wrap-text u-header-height-padding-top u-border-width">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+	
+<header id="masthead" class="site-header u-header-background u-content-bottom-spacing" role="banner">
+	<div class="u-header-sides-spacing">
+		<div class="o-wrapper  u-container-width  c-navbar__wrapper">
+
+			
+			<div class="c-navbar  c-navbar--dropdown  u-header-height">
+				<input class="c-navbar__checkbox" id="menu-toggle" type="checkbox">
+				<label class="c-navbar__label u-header-sides-spacing" for="menu-toggle">
+					<span class="c-navbar__label-icon"><span class="c-burger c-burger--fade">
+	<b class="c-burger__slice c-burger__slice--top"></b>
+	<b class="c-burger__slice c-burger__slice--middle"></b>
+	<b class="c-burger__slice c-burger__slice--bottom"></b>
+</span>
+</span>
+					<span class="c-navbar__label-text screen-reader-text">Menu</span>
+				</label><!-- .c-navbar__label -->
+
+				
+				
+<div class="c-navbar__content  u-header-background">
+
+	
+		<div class="c-navbar__zone c-navbar__zone--left">
+			<div class="header nav">
+
+	<div class="c-branding">
+
+		
+			<div class="c-logo">
+									<div class="c-logo__default">
+						<a href="/" class="custom-logo-link" rel="home" aria-current="page"><img width="1087" height="290" src="/wp-content/uploads/2022/05/tablem-logo2x.png" class="custom-logo" alt="Table M" decoding="async" srcset="/wp-content/uploads/2022/05/tablem-logo2x.png 1087w, /wp-content/uploads/2022/05/tablem-logo2x-300x80.png 300w, /wp-content/uploads/2022/05/tablem-logo2x-1024x273.png 1024w, /wp-content/uploads/2022/05/tablem-logo2x-768x205.png 768w, /wp-content/uploads/2022/05/tablem-logo2x-450x120.png 450w, /wp-content/uploads/2022/05/tablem-logo2x-800x213.png 800w" sizes="(max-width: 1087px) 100vw, 1087px" data-attachment-id="1764" data-permalink="http://muschenetz.com/tablem/tablem-logo2x/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/tablem-logo2x.png" data-orig-size="1087,290" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="tablem-logo2x" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/tablem-logo2x-300x80.png" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/tablem-logo2x-1024x273.png"></a>					</div>
+				
+							</div>
+
+		
+		<a href="/" rel="home">
+							<h1 class="site-title">Table M</h1>
+					</a>
+
+		<p class="site-description site-description-text">FOOD x PHOTOGRAPHY</p>
+
+	</div>
+<!-- .c-branding -->
+
+</div>
+		</div>
+<!-- .c-navbar__zone -->
+
+	
+		<div class="c-navbar__zone c-navbar__zone--middle">
+					</div>
+<!-- .c-navbar__zone -->
+
+	
+		<div class="c-navbar__zone c-navbar__zone--right c-navbar__zone--push-right">
+			<nav class="menu-main-menu-container"><ul id="menu-1" class="menu  menu--primary">
+<li id="menu-item-1785" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1785"><a href="/about-2/">About</a></li>
+<li id="menu-item-1788" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1788"><a href="/category/food/entrees/">Entrees</a></li>
+<li id="menu-item-1789" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1789"><a href="/category/food/sides/">Sides</a></li>
+<li id="menu-item-1790" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1790"><a href="/category/food/beverages/">Beverages</a></li>
+<li id="menu-item-1791" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1791"><a href="/category/food/breakfasts/">Breakfasts</a></li>
+<li id="menu-item-1792" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1792"><a href="/category/food/desserts/">Desserts</a></li>
+<li id="menu-item-1793" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1793"><a href="/category/food/sauces/">Sauces</a></li>
+<li id="menu-item-1795" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1795"><a href="/category/food/soups/">Soups</a></li>
+</ul></nav>		</div>
+<!-- .c-navbar__zone -->
+
+	
+</div>
+<!-- .c-navbar__content -->
+
+				
+			</div>
+<!-- .c-navbar -->
+
+			
+		</div>
+<!-- .o-wrapper  .u-container-width -->
+	</div>
+<!-- .u-header-sides-spacing -->
+</header><!-- #masthead .site-header -->
+
+	
+	
+	<div id="content" class="site-content barba-container u-content-background">
+
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main  u-content-bottom-spacing" role="main">
+
+            
+            
+                
+                
+                <article id="post-1165" class="post-1165 page type-page status-publish hentry">
+                    <div class="u-container-sides-spacing">
+                        <div class="o-wrapper u-container-width">
+
+                            <header class="entry-header screen-reader-text">
+
+                                
+                                <h1 class="entry-title  c-page-header__title">Home</h1>
+                                
+                            </header><!-- .entry-header -->
+
+                            <div class="o-layout">
+                                
+<div class="widget-area  widget-area--full  widget-area--front-page-1  o-layout__full">
+	<section id="search-9" class="widget widget--full widget_search"><form role="search" method="get" class="search-form" action="http://muschenetz.com/tablem/">
+		<label class="screen-reader-text">Search for:</label>
+		<input type="text" placeholder="Search here" value="" name="s" class="search-field">
+		<button type="submit" class="search-submit"><span>Search</span></button>
+		</form></section><section id="featured-posts-5cards-4" class="widget widget--full widget_featured_posts_5cards">
+					<div class="featured-posts-5cards aspect-ratio-square c-gallery c-gallery--regular c-gallery--cropped c-gallery--title-regular c-gallery--title-left c-gallery--widget">
+
+						<div class="posts-wrapper--main">
+
+	<article id="post-307" class="post-307 post type-post status-publish format-standard has-post-thumbnail hentry category-food category-salad">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="681" height="1024" src="/wp-content/uploads/2022/05/img_0559.jpg" class="attachment-pixelgrade_single_portrait size-pixelgrade_single_portrait wp-post-image" alt="" decoding="async" srcset="/wp-content/uploads/2022/05/img_0559.jpg 681w, /wp-content/uploads/2022/05/img_0559-200x300.jpg 200w, /wp-content/uploads/2022/05/img_0559-450x677.jpg 450w, /wp-content/uploads/2022/05/img_0559-532x800.jpg 532w" sizes="(max-width: 681px) 100vw, 681px" data-attachment-id="1661" data-permalink="http://muschenetz.com/tablem/img_0559/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_0559.jpg" data-orig-size="681,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;3.5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1222779077&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.016666666666667&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_0559" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_0559-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_0559.jpg"><span class="c-card__letter">B</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">May 7, 2022</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Black Sesame Summer Dressing</span></h2>
+									<div class="c-card__excerpt">
+<p>This is a light, Asian influenced salad dressing. It works equally well spilled onto a simple bed of lettuce leaves, or a more complex salad&#8230;</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/black-sesame-summer-dressing/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/black-sesame-summer-dressing/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+</div>
+<!-- .posts-wrapper--main -->
+<div class="posts-wrapper--left">
+
+	<article id="post-105" class="post-105 post type-post status-publish format-standard has-post-thumbnail hentry category-entrees category-food">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="338" src="/wp-content/uploads/2022/05/paella-450x338.jpeg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/paella-450x338.jpeg 450w, /wp-content/uploads/2022/05/paella-300x225.jpeg 300w, /wp-content/uploads/2022/05/paella-1024x768.jpeg 1024w, /wp-content/uploads/2022/05/paella-768x576.jpeg 768w, /wp-content/uploads/2022/05/paella-1536x1152.jpeg 1536w, /wp-content/uploads/2022/05/paella-2048x1536.jpeg 2048w, /wp-content/uploads/2022/05/paella-2000x1500.jpeg 2000w, /wp-content/uploads/2022/05/paella-1067x800.jpeg 1067w, /wp-content/uploads/2022/05/paella-1360x1020.jpeg 1360w, /wp-content/uploads/2022/05/paella-800x600.jpeg 800w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1726" data-permalink="http://muschenetz.com/tablem/paella/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/paella-scaled.jpeg" data-orig-size="2560,1920" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2.4&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone XS&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1603819700&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;6&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.0081967213114754&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="paella" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/paella-300x225.jpeg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/paella-1024x768.jpeg"><span class="c-card__letter">P</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">May 5, 2022</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Paella</span></h2>
+									<div class="c-card__excerpt">
+<p>Paella is a great dish that also inspires many passions. The version I most often make is tuned a bit to my family’s preferences, in..</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/paella-mon-pere/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/paella-mon-pere/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+
+	<article id="post-489" class="post-489 post type-post status-publish format-standard has-post-thumbnail hentry category-food category-sides">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="677" src="/wp-content/uploads/2022/05/img_5435-450x677.jpg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/img_5435-450x677.jpg 450w, /wp-content/uploads/2022/05/img_5435-200x300.jpg 200w, /wp-content/uploads/2022/05/img_5435-532x800.jpg 532w, /wp-content/uploads/2022/05/img_5435.jpg 681w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1696" data-permalink="http://muschenetz.com/tablem/img_5435/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_5435.jpg" data-orig-size="681,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1233842206&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.00125&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_5435" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_5435-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_5435.jpg"><span class="c-card__letter">M</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">February 5, 2009</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Mint-Scented Carrot-Fennel Purée</span></h2>
+									<div class="c-card__excerpt">
+<p>&#8220;I don&#8217;t like carrot purée,&#8221; says Jane. &#8220;Why not?&#8221; I say. &#8220;I just don&#8217;t.&#8221; &#8220;Okay. I&#8217;ll make some for myself and regular carrots for you&#8221;&#8230;</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/mint-scented-carrot-fennel-puree/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/mint-scented-carrot-fennel-puree/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+</div>
+<!-- .posts-wrapper--left -->
+<div class="posts-wrapper--right">
+
+	<article id="post-485" class="post-485 post type-post status-publish format-standard has-post-thumbnail hentry category-desserts category-food">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="676" src="/wp-content/uploads/2022/05/img_1832-450x676.jpg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/img_1832-450x676.jpg 450w, /wp-content/uploads/2022/05/img_1832-200x300.jpg 200w, /wp-content/uploads/2022/05/img_1832-533x800.jpg 533w, /wp-content/uploads/2022/05/img_1832.jpg 682w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1684" data-permalink="http://muschenetz.com/tablem/img_1832/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_1832.jpg" data-orig-size="682,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1225203465&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.008&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_1832" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_1832-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_1832.jpg"><span class="c-card__letter">B</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">February 5, 2009</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Banana Rum Gelato</span></h2>
+									<div class="c-card__excerpt">
+<p>Rich and chewy, this gelato is incredibly easy to make. Use really ripe bananas and a good-quality dark rum for the best results. Once the..</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/banana-rum-gelato/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/banana-rum-gelato/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+
+	<article id="post-457" class="post-457 post type-post status-publish format-standard has-post-thumbnail hentry category-desserts category-food">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="674" src="/wp-content/uploads/2022/05/img_3377-450x674.jpg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/img_3377-450x674.jpg 450w, /wp-content/uploads/2022/05/img_3377-200x300.jpg 200w, /wp-content/uploads/2022/05/img_3377-534x800.jpg 534w, /wp-content/uploads/2022/05/img_3377.jpg 684w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1695" data-permalink="http://muschenetz.com/tablem/img_3377/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_3377.jpg" data-orig-size="684,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2.2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1230213082&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.003125&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_3377" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_3377-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_3377.jpg"><span class="c-card__letter">C</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">December 25, 2008</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Chocolate Sorbet</span></h2>
+									<div class="c-card__excerpt">
+<p>I really like the chocolate sorbet by Double Rainbow ice cream (a San Francisco company, by the way), but as I was hovering over the..</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/chocolate-sorbet/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/chocolate-sorbet/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+</div>
+<!-- .posts-wrapper--right -->
+
+					</div>
+
+					
+					</section>
+</div>
+<!-- .o-layout__full -->
+
+                                
+<div class="widget-area  widget-area--main  widget-area--front-page-2  o-layout__main">
+	<section id="featured-posts-grid-5" class="widget widget--content widget_featured_posts_grid"><h2 class="widget__title h3"><span>Recent Posts</span></h2>
+					<div class="featured-posts-grid o-grid o-grid--4col-@small aspect-ratio-square c-gallery c-gallery--regular c-gallery--cropped c-gallery--title-regular c-gallery--title-left c-gallery--widget">
+
+						
+	<article id="post-1614" class="post-1614 post type-post status-publish format-standard has-post-thumbnail hentry category-entrees category-featured category-food">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="677" src="/wp-content/uploads/2022/05/img_3101-450x677.jpg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/img_3101-450x677.jpg 450w, /wp-content/uploads/2022/05/img_3101-200x300.jpg 200w, /wp-content/uploads/2022/05/img_3101-532x800.jpg 532w, /wp-content/uploads/2022/05/img_3101.jpg 681w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1693" data-permalink="http://muschenetz.com/tablem/img_3101/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_3101.jpg" data-orig-size="681,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;3.2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1230128180&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.0125&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_3101" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_3101-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_3101.jpg"><span class="c-card__letter">W</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">December 25, 2008</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Wet Roast Chicken with Mushroom Sauce</span></h2>
+									<div class="c-card__excerpt">
+<p>This recipe was discovered after a search for something to cook in a brand-new Staub cast-iron pan I picked up at a steal from Amazon&#8230;</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/wet-roast-chicken-with-mushroom-sauce/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/wet-roast-chicken-with-mushroom-sauce/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+
+	<article id="post-438" class="post-438 post type-post status-publish format-standard has-post-thumbnail hentry category-beverages category-featured category-food">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="677" src="/wp-content/uploads/2022/05/img_2282-450x677.jpg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/img_2282-450x677.jpg 450w, /wp-content/uploads/2022/05/img_2282-200x300.jpg 200w, /wp-content/uploads/2022/05/img_2282-532x800.jpg 532w, /wp-content/uploads/2022/05/img_2282.jpg 681w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1687" data-permalink="http://muschenetz.com/tablem/img_2282/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_2282.jpg" data-orig-size="681,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;4&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1226588219&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.016666666666667&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_2282" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_2282-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_2282.jpg"><span class="c-card__letter">P</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">December 3, 2008</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Pear Cream Soda</span></h2>
+									<div class="c-card__excerpt">
+<p>It&#8217;s been a while since I made sodas at home, and the first one I tried was inspired by some fresh ripe organic fruit picked..</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/pear-cream-soda/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/pear-cream-soda/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+
+	<article id="post-435" class="post-435 post type-post status-publish format-standard has-post-thumbnail hentry category-food category-sides">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="677" src="/wp-content/uploads/2022/05/img_2296-450x677.jpg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/img_2296-450x677.jpg 450w, /wp-content/uploads/2022/05/img_2296-200x300.jpg 200w, /wp-content/uploads/2022/05/img_2296-532x800.jpg 532w, /wp-content/uploads/2022/05/img_2296.jpg 681w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1688" data-permalink="http://muschenetz.com/tablem/img_2296/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_2296.jpg" data-orig-size="681,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2.5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1226590533&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.033333333333333&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_2296" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_2296-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_2296.jpg"><span class="c-card__letter">R</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">December 3, 2008</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Roast Peppers in Oil</span></h2>
+									<div class="c-card__excerpt">
+<p>As part of our bi-weekly box of farm-fresh produce from Mariquita Farms, we ended up getting a significant amount of red peppers. Unsure exactly what..</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/roast-peppers-in-oil/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/roast-peppers-in-oil/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+
+	<article id="post-419" class="post-419 post type-post status-publish format-standard has-post-thumbnail hentry category-desserts category-featured category-food">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="675" src="/wp-content/uploads/2022/05/img_1732-450x675.jpg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/img_1732-450x675.jpg 450w, /wp-content/uploads/2022/05/img_1732-200x300.jpg 200w, /wp-content/uploads/2022/05/img_1732-534x800.jpg 534w, /wp-content/uploads/2022/05/img_1732.jpg 683w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1681" data-permalink="http://muschenetz.com/tablem/img_1732/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_1732.jpg" data-orig-size="683,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;3.5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1224948970&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.016666666666667&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_1732" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_1732-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_1732.jpg"><span class="c-card__letter">C</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">October 28, 2008</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Chocolate Cloud Cake</span></h2>
+									<div class="c-card__excerpt">
+<p>I had never paid much attention to this recipe in Richard Sax&#8217;s Classic Home Desserts until one day, I run across it while reading through..</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/chocolate-cloud-cake/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/chocolate-cloud-cake/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+
+	<article id="post-386" class="post-386 post type-post status-publish format-standard has-post-thumbnail hentry category-entrees category-food">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="675" src="/wp-content/uploads/2022/05/img_1488-450x675.jpg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/img_1488-450x675.jpg 450w, /wp-content/uploads/2022/05/img_1488-200x300.jpg 200w, /wp-content/uploads/2022/05/img_1488-534x800.jpg 534w, /wp-content/uploads/2022/05/img_1488.jpg 683w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1679" data-permalink="http://muschenetz.com/tablem/img_1488/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_1488.jpg" data-orig-size="683,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;4&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1223571510&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.02&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_1488" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_1488-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_1488.jpg"><span class="c-card__letter">R</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">October 9, 2008</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Roast Beef Au Jus</span></h2>
+									<div class="c-card__excerpt">
+<p>There is no better sandwich than a French Dip. Making one requires a well-cooked roast beef, with a dark flavorful &#8220;jus&#8221; in which to dip the..</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/roast-beef-au-jus/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/roast-beef-au-jus/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+
+	<article id="post-1613" class="post-1613 post type-post status-publish format-standard has-post-thumbnail hentry category-food category-sauces">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="677" src="/wp-content/uploads/2022/05/sugared_blackberries-450x677.jpg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/sugared_blackberries-450x677.jpg 450w, /wp-content/uploads/2022/05/sugared_blackberries-200x300.jpg 200w, /wp-content/uploads/2022/05/sugared_blackberries-532x800.jpg 532w, /wp-content/uploads/2022/05/sugared_blackberries.jpg 681w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1720" data-permalink="http://muschenetz.com/tablem/sugared_blackberries/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/sugared_blackberries.jpg" data-orig-size="681,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;3.5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1220696465&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.0025&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="sugared_blackberries" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/sugared_blackberries-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/sugared_blackberries.jpg"><span class="c-card__letter">S</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">October 2, 2008</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Sugared Fruit</span></h2>
+									<div class="c-card__excerpt">
+<p>This is a very old and incredibly easy method of preserving fruit. We couldn&#8217;t resist the amazing organic peaches, nectarines and plums at the awesome Alemany&#8217;s Farmers..</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/sugared-fruit/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/sugared-fruit/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+
+	<article id="post-354" class="post-354 post type-post status-publish format-standard has-post-thumbnail hentry category-food category-sides">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="677" src="/wp-content/uploads/2022/05/img_0660-450x677.jpg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/img_0660-450x677.jpg 450w, /wp-content/uploads/2022/05/img_0660-200x300.jpg 200w, /wp-content/uploads/2022/05/img_0660-532x800.jpg 532w, /wp-content/uploads/2022/05/img_0660.jpg 681w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1663" data-permalink="http://muschenetz.com/tablem/img_0660/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_0660.jpg" data-orig-size="681,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2.5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1222796888&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.02&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_0660" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_0660-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/img_0660.jpg"><span class="c-card__letter">H</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">October 2, 2008</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Hummus</span></h2>
+									<div class="c-card__excerpt">
+<p>This recipe comes from the David Rosengarten cookbook, It&#8217;s All American Food. We&#8217;re big fans of this book, and it seems strangely underrated (I bought..</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/hummus/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/hummus/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+
+	<article id="post-315" class="post-315 post type-post status-publish format-standard has-post-thumbnail hentry category-breakfasts category-food">
+
+		<div class="c-card">
+
+			
+							<div class="c-card__aside c-card__thumbnail-background">
+					<div class="c-card__frame">
+						<img width="450" height="675" src="/wp-content/uploads/2022/05/kaiserschmarren-450x675.jpg" class="attachment-pixelgrade_card_image size-pixelgrade_card_image wp-post-image" alt="" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/05/kaiserschmarren-450x675.jpg 450w, /wp-content/uploads/2022/05/kaiserschmarren-200x300.jpg 200w, /wp-content/uploads/2022/05/kaiserschmarren-534x800.jpg 534w, /wp-content/uploads/2022/05/kaiserschmarren.jpg 683w" sizes="(max-width: 450px) 100vw, 450px" data-attachment-id="1701" data-permalink="http://muschenetz.com/tablem/kaiserschmarren-2/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/kaiserschmarren.jpg" data-orig-size="683,1024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;Canon EOS DIGITAL REBEL XT&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1135501784&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;30&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.02&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="kaiserschmarren" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/kaiserschmarren-200x300.jpg" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/kaiserschmarren.jpg"><span class="c-card__letter">K</span>					</div>
+				</div>
+			
+			<div class="c-card__content">
+
+				
+					<div class="c-card__meta c-meta">
+						<div class="c-meta__primary">
+<span class="screen-reader-text">Main Category</span><ul>
+<li><a href="/category/food/" title="Food">Food</a></li>
+</ul>
+</div>
+<div class="c-meta__separator js-card-meta-separator"></div>
+<div class="c-meta__secondary"><span class="posted-on">October 1, 2008</span></div>					</div>
+
+									<h2 class="c-card__title"><span>Kaiserschmarren</span></h2>
+									<div class="c-card__excerpt">
+<p>Kaiserschmarren is a thick, souffle-like pancake, first&nbsp;created for the Austrian Emperor, Francis Joseph I. Oma and Opa Muschenetz grew up in Czechia, an area under..</p>
+</div>
+				
+				<div class="c-card__footer">
+					<a href="/food/kaiserschmarren/" class="c-card__action">Read More</a>
+				</div>
+
+			</div>
+
+			<a class="c-card__link" href="/food/kaiserschmarren/"></a>
+			<div class="c-card__badge"></div>
+
+			
+		</div>
+
+	</article>
+
+
+					</div>
+
+					
+					</section>
+</div>
+<!-- .o-layout__main -->
+
+                                                            </div>
+
+                        </div>
+<!-- .o-wrapper .u-container-width -->
+                    </div>
+<!-- .u-container-sides-spacing -->
+                </article><!-- #post-## -->
+
+                
+            
+            
+        </main><!-- #main -->
+    </div>
+<!-- #primary -->
+
+
+
+	
+	
+<footer class="site-footer u-footer-background u-container-sides-spacing">
+	<div class="o-wrapper u-container-width">
+
+		
+		
+<div class="c-footer  u-footer-top-spacing  u-footer-bottom-spacing">
+
+	
+		<div class="c-footer__zone c-footer__zone--bottom">
+
+			<span class="c-footer__credits"><a href="http://wordpress.org/">Proudly powered by WordPress</a> | Theme: Julia Lite by <a href="https://pixelgrade.com/?utm_source=julia-lite-clients&#038;utm_medium=footer&#038;utm_campaign=julia-lite" title="The Pixelgrade Website" rel="nofollow">Pixelgrade</a></span>
+
+		</div>
+<!-- .c-footer__zone -->
+
+	
+</div>
+<!-- .c-footer -->
+
+			</div>
+<!-- .o-wrapper.u-container-width.content-area -->
+</footer>
+
+	
+	<span class="u-hidden  js-menu-mobile-label">Menu</span>
+
+	<div class="c-border"></div>
+
+	
+</div>
+<!-- .barba-container -->
+
+
+<div class="c-border"></div>
+<div class="c-cursor"></div>
+
+<style id="core-block-supports-inline-css" type="text/css">/**
+ * Core styles: block-supports
+ */</style>
+<script type="text/javascript" src="/wp-includes/js/imagesloaded.min.js?ver=4.1.4" id="imagesloaded-js"></script>
+<script type="text/javascript" src="/wp-includes/js/masonry.min.js?ver=4.2.2" id="masonry-js"></script>
+<script type="text/javascript" src="/wp-includes/js/hoverIntent.js?ver=1.10.2" id="hoverIntent-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/assets/js/TweenMax.min.js?ver=2.0.2" id="tweenmax-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/assets/js/select2.js?ver=4.0.5" id="select2-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/assets/js/slick.js?ver=1.9.0" id="slick-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/assets/js/scripts.js?ver=1.2.3" id="julia-scripts-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/components/blog/js/navigation.js?ver=20180101" id="pixelgrade-navigation-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/components/blog/js/skip-link-focus-fix.js?ver=20180101" id="pixelgrade-skip-link-focus-fix-js"></script>
+
+</div>
+<!-- #barba-wrapper -->
+
+
+</body>
+
+
+<!-- Dynamic page generated in 0.239 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2023-07-22 20:36:58 -->
+</html>
