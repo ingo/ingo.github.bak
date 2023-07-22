@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Uncategorized &#8211; Table M</title>
+	<atom:link href="/category/uncategorized/feed/" rel="self" type="application/rss+xml" />
+	<link></link>
+	<description>FOOD x PHOTOGRAPHY</description>
+	<lastBuildDate>Sat, 06 Sep 2008 05:44:50 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>Persian Rice</title>
+		<link>/uncategorized/persian-rice/</link>
+					<comments>/uncategorized/persian-rice/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 06 Sep 2008 05:44:50 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">http://www.muschenetz.com/tablem/?p=155</guid>
+
+					<description><![CDATA[This recipe is taken from Claudia Roden, after a favorite dish of Ingo during childhood, prepared by a close family friend Guitti. It&#8217;s worked well,..]]></description>
+										<content:encoded><![CDATA[<p><span class="leadin">This recipe is taken from Claudia Roden, after a favorite dish of Ingo during childhood, prepared by a close family friend Guitti. It&#8217;s worked well, but both Jane and Ingo are still working on getting the &#8220;Tah Dig&#8221; just right.</span><br />
+<span id="more-155"></span><br />
+[singlepic=5,300,450]</p>
+<h3>Yield</h3>
+<p>Serves 6</p>
+<h3>Ingredients</h3>
+<ul>
+<li>1 lb. basmati rice (2 cups)</li>
+<li>4 tbsp. butter (softened)</li>
+<li>3 tbsp. salt</li>
+</ul>
+<h3>Directions</h3>
+<p>Wash basmati in several changes cold water. Drain well. Fill a large nonstick pan with 2 quarts water and salt. Bring to boil. Add rice and cook at a vigorous boil 6-10 minutes. You ant the rice just slightly underdone.</p>
+<p>Drain rice well and rinse under lukewarm water. Place 2 tbsp. butter in the pan and add 1 cup rice. Mix well with a spatula. Add remaining rice, and mix in remaining butter. Spead a clean dishcloth or stack of paper towels over the top of the pot, and cover tightly with a lid.</p>
+<p>Put rice on high for a dew minutes (let it go a little longer than you might think), and then turn heat to very low. Steam 20-30 minutes, until grains are tender and separate.</p>
+<p>To serve, invert pan over a plate so the crunchy part (the &#8220;tah dig&#8221;) is on top. This is served as a delicacy to guests.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/uncategorized/persian-rice/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

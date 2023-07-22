@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Beet Soup With Dill Cream	</title>
+	<atom:link href="/food/beet-soup-with-dill-cream/feed/" rel="self" type="application/rss+xml" />
+	<link>/food/beet-soup-with-dill-cream/</link>
+	<description>FOOD x PHOTOGRAPHY</description>
+	<lastBuildDate>Tue, 10 May 2022 01:57:49 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>
+		By: Rosilene		</title>
+		<link>/food/beet-soup-with-dill-cream/#comment-13</link>
+
+		<dc:creator><![CDATA[Rosilene]]></dc:creator>
+		<pubDate>Sat, 12 Dec 2015 17:39:39 +0000</pubDate>
+		<guid isPermaLink="false">http://www.muschenetz.com/tablem/?p=187#comment-13</guid>
+
+					<description><![CDATA[I planted a basil plant oudsite this year, next to my house.  I absolutely loved having the fresh basil for cooking, and the plant grew to be huge. Of course, it has now succumbed to our first frost, but will definitely have it again next year, and would be interested in seeing how it works for others having it inside in a pot.]]></description>
+			<content:encoded><![CDATA[<p>I planted a basil plant oudsite this year, next to my house.  I absolutely loved having the fresh basil for cooking, and the plant grew to be huge. Of course, it has now succumbed to our first frost, but will definitely have it again next year, and would be interested in seeing how it works for others having it inside in a pot.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

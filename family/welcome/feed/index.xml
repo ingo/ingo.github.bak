@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Welcome	</title>
+	<atom:link href="/family/welcome/feed/" rel="self" type="application/rss+xml" />
+	<link>/family/welcome/</link>
+	<description>FOOD x PHOTOGRAPHY</description>
+	<lastBuildDate>Mon, 09 Nov 2009 21:31:35 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>
+		By: Corby Kilmer		</title>
+		<link>/family/welcome/#comment-4</link>
+
+		<dc:creator><![CDATA[Corby Kilmer]]></dc:creator>
+		<pubDate>Mon, 09 Nov 2009 21:31:35 +0000</pubDate>
+		<guid isPermaLink="false">http://www.muschenetz.com/wordpress/?p=13#comment-4</guid>
+
+					<description><![CDATA[Hello,
+I am putting together some interpretive displays that will be used at a new roadside rest area currently under construction near Camp Roberts, California.
+
+I would like to know if I could have your permission to use one of your photos (that I saw in a book on California oak trees) in my display.  It would not be reproduced anywhere else (no T-shirts etc.) and I would give you a credit line.  We get over a million people a year traveling through the rest area so your art would be seen by many.  I already have several other local artists who are also contributing their work to other similar displays, so you would be in good company.  
+
+Unfortunately I can only offer you recognition, there would not be any monetary compensation (I work for the State of California...).  If this would be acceptable to you please respond in writing by email and we can discuss file details etc
+Thanks very much
+
+Corby Kilmer, Landscape Architect
+District 5 Roadside Rest Area Coordinator
+District 5 Transportation Art Coordinator
+Phone (805)542-4679
+California Department of Transportation
+50 Higuera Street  San Luis Obispo, Ca. 93401]]></description>
+			<content:encoded><![CDATA[<p>Hello,<br />
+I am putting together some interpretive displays that will be used at a new roadside rest area currently under construction near Camp Roberts, California.</p>
+<p>I would like to know if I could have your permission to use one of your photos (that I saw in a book on California oak trees) in my display.  It would not be reproduced anywhere else (no T-shirts etc.) and I would give you a credit line.  We get over a million people a year traveling through the rest area so your art would be seen by many.  I already have several other local artists who are also contributing their work to other similar displays, so you would be in good company.  </p>
+<p>Unfortunately I can only offer you recognition, there would not be any monetary compensation (I work for the State of California&#8230;).  If this would be acceptable to you please respond in writing by email and we can discuss file details etc<br />
+Thanks very much</p>
+<p>Corby Kilmer, Landscape Architect<br />
+District 5 Roadside Rest Area Coordinator<br />
+District 5 Transportation Art Coordinator<br />
+Phone (805)542-4679<br />
+California Department of Transportation<br />
+50 Higuera Street  San Luis Obispo, Ca. 93401</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

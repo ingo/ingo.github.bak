@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Banana Rum Gelato	</title>
+	<atom:link href="/food/banana-rum-gelato/feed/" rel="self" type="application/rss+xml" />
+	<link>/food/banana-rum-gelato/</link>
+	<description>FOOD x PHOTOGRAPHY</description>
+	<lastBuildDate>Mon, 09 May 2022 04:00:11 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>
+		By: Cucee Sprouts		</title>
+		<link>/food/banana-rum-gelato/#comment-29</link>
+
+		<dc:creator><![CDATA[Cucee Sprouts]]></dc:creator>
+		<pubDate>Thu, 07 Oct 2010 18:03:49 +0000</pubDate>
+		<guid isPermaLink="false">http://www.muschenetz.com/tablem/?p=485#comment-29</guid>
+
+					<description><![CDATA[I am also an avid food lover and a photographer. I live in the Bay Area as well.]]></description>
+			<content:encoded><![CDATA[<p>I am also an avid food lover and a photographer. I live in the Bay Area as well.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

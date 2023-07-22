@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<title>Hefeknödel &#8211; Table M</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//v0.wordpress.com">
+<link rel="dns-prefetch" href="//jetpack.wordpress.com">
+<link rel="dns-prefetch" href="//s0.wp.com">
+<link rel="dns-prefetch" href="//public-api.wordpress.com">
+<link rel="dns-prefetch" href="//0.gravatar.com">
+<link rel="dns-prefetch" href="//1.gravatar.com">
+<link rel="dns-prefetch" href="//2.gravatar.com">
+<link rel="alternate" type="application/rss+xml" title="Table M &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Table M &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Table M &raquo; Hefeknödel Comments Feed" href="/food/hefeknodel/feed/">
+<script type="text/javascript">window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/muschenetz.com\/tablem\/wp-includes\/js\/wp-emoji.js?ver=6.2.2","twemoji":"http:\/\/muschenetz.com\/tablem\/wp-includes\/js\/twemoji.js?ver=6.2.2"}};
+/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {string} set1 Set of Emoji to test.
+	 * @param {string} set2 Set of Emoji to test.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( set1, 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( set2, 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Determines if the browser properly renders Emoji that Twemoji can supplement.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. Added in Unicode 13.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					'🏳️‍⚧️', // as a zero-width joiner sequence
+					'🏳️​⚧️'  // separated by a zero-width space
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					'🇺🇳',       // as the sequence of two code points
+					'🇺​🇳'  // as the two code points separated by a zero-width space
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather a five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					// as the flag sequence
+					'🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+					// with each code point separated by a zero-width space
+					'🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿'
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Why can't we be friends? Everyone can now shake hands in emoji, regardless of skin tone!
+				 *
+				 * To test for Emoji 14.0 support, try to render a new emoji: Handshake: Light Skin Tone, Dark Skin Tone.
+				 *
+				 * The Handshake: Light Skin Tone, Dark Skin Tone emoji is a ZWJ sequence combining 🫱 Rightwards Hand,
+				 * 🏻 Light Skin Tone, a Zero Width Joiner, 🫲 Leftwards Hand, and 🏿 Dark Skin Tone.
+				 *
+				 * 0x1FAF1 == Rightwards Hand
+				 * 0x1F3FB == Light Skin Tone
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0x1FAF2 == Leftwards Hand
+				 * 0x1F3FF == Dark Skin Tone.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					'🫱🏻‍🫲🏿', // as the zero-width joiner sequence
+					'🫱🏻​🫲🏿'  // separated by a zero-width space
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );</script>
+<style type="text/css">@font-face {
+	font-family: 'tangerineregular';
+	src: url('/wp-content/uploads/fonts/1770/tangerine-webfont.woff2') format('woff2'),
+		url('/wp-content/uploads/fonts/1770/tangerine-webfont.woff') format('woff'),
+		url('/wp-content/uploads/fonts/1770/tangerine-webfont.ttf') format('truetype'),
+	font-weight: normal;
+	font-style: normal;
+}</style>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.css?ver=6.2.2" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">.has-text-align-justify{text-align:justify;}</style>
+<link rel="stylesheet" id="jetpack-videopress-video-block-view-css" href="/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-videopress/build/block-editor/blocks/video/view.css?minify=false#038;ver=34ae973733627b74a14e" type="text/css" media="all">
+<link rel="stylesheet" id="mediaelement-css" href="/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17" type="text/css" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="/wp-includes/js/mediaelement/wp-mediaelement.css?ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.css?ver=6.2.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="julia-google-fonts-css" href="//fonts.googleapis.com/css?family=Playfair+Display%3A700%7CLora%3A400%2C700%7CPT+Serif%3A400%2C400i%2C700%2C700i%7CMontserrat%3A300%2C400%2C500%2C600&#038;subset=latin%2Clatin-ext&#038;ver=6.2.2" type="text/css" media="all">
+<link rel="stylesheet" id="julia-style-css" href="/wp-content/themes/julia-lite/style.css?ver=1.2.3" type="text/css" media="all">
+<link rel="stylesheet" id="sharedaddy-css" href="/wp-content/plugins/jetpack/modules/sharedaddy/sharing.css?ver=12.3" type="text/css" media="all">
+<link rel="stylesheet" id="social-logos-css" href="/wp-content/plugins/jetpack/_inc/social-logos/social-logos.css?ver=12.3" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.js?ver=3.6.4" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.js?ver=3.4.0" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/139">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="canonical" href="/food/hefeknodel/">
+<link rel="shortlink" href="/?p=139">
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css" type="text/css">.site-title, .site-description-text {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}</style>
+		<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=%2Ffood%2Fhefeknodel%2F">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=%2Ffood%2Fhefeknodel%2F#038;format=xml">
+<link rel="pingback" href="/xmlrpc.php">
+<link rel="pingback" href="/xmlrpc.php">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hefeknödel">
+<meta property="og:url" content="/food/hefeknodel/">
+<meta property="og:description" content="Knödel are a form of boiled bread, wonderful as an accompaniment to a dish of chicken or beef with a creamy sauce. They are quite possibly one of the things Ingo likes to eat most in this world. Yo…">
+<meta property="article:published_time" content="2008-09-06T05:32:06+00:00">
+<meta property="article:modified_time" content="2008-09-06T05:32:06+00:00">
+<meta property="og:site_name" content="Table M">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:image:alt">
+<meta name="twitter:text:title" content="Hefeknödel">
+<meta name="twitter:card" content="summary">
+
+<!-- End Jetpack Open Graph Tags -->
+</head>
+
+<body class="post-template-default single single-post postid-139 single-format-standard wp-custom-logo u-content-background singular entry-image--none u-site-header-sticky u-footer-layout-stacked u-underlined-links site-title-hidden u-full-width-header u-site-header-full-width u-buttons-1 customify" data-parallax data-ajaxloading>
+
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-dark-grayscale">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr>
+					<fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg>
+					<fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-grayscale">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0 1"></fefuncr>
+					<fefuncg type="table" tablevalues="0 1"></fefuncg>
+					<fefuncb type="table" tablevalues="0 1"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-purple-yellow">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr>
+					<fefuncg type="table" tablevalues="0 1"></fefuncg>
+					<fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-blue-red">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0 1"></fefuncr>
+					<fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg>
+					<fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-midnight">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0 0"></fefuncr>
+					<fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg>
+					<fefuncb type="table" tablevalues="0 1"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-magenta-yellow">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr>
+					<fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg>
+					<fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-purple-green">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr>
+					<fefuncg type="table" tablevalues="0 1"></fefuncg>
+					<fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-blue-orange">
+				<fecolormatrix color-interpolation-filters="sRGB" type="matrix" values="
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+						.299 .587 .114 0 0
+					"></fecolormatrix>
+				<fecomponenttransfer color-interpolation-filters="sRGB">
+					<fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr>
+					<fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg>
+					<fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb>
+					<fefunca type="table" tablevalues="1 1"></fefunca>
+				</fecomponenttransfer>
+				<fecomposite in2="SourceGraphic" operator="in"></fecomposite>
+			</filter>
+		</defs>
+	</svg>
+
+	
+
+
+<div id="barba-wrapper" class="site u-wrap-text u-header-height-padding-top u-border-width">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+	
+<header id="masthead" class="site-header u-header-background u-content-bottom-spacing" role="banner">
+	<div class="u-header-sides-spacing">
+		<div class="o-wrapper  u-container-width  c-navbar__wrapper">
+
+			
+			<div class="c-navbar  c-navbar--dropdown  u-header-height">
+				<input class="c-navbar__checkbox" id="menu-toggle" type="checkbox">
+				<label class="c-navbar__label u-header-sides-spacing" for="menu-toggle">
+					<span class="c-navbar__label-icon"><span class="c-burger c-burger--fade">
+	<b class="c-burger__slice c-burger__slice--top"></b>
+	<b class="c-burger__slice c-burger__slice--middle"></b>
+	<b class="c-burger__slice c-burger__slice--bottom"></b>
+</span>
+</span>
+					<span class="c-navbar__label-text screen-reader-text">Menu</span>
+				</label><!-- .c-navbar__label -->
+
+				
+				
+<div class="c-navbar__content  u-header-background">
+
+	
+		<div class="c-navbar__zone c-navbar__zone--left">
+			<div class="header nav">
+
+	<div class="c-branding">
+
+		
+			<div class="c-logo">
+									<div class="c-logo__default">
+						<a href="/" class="custom-logo-link" rel="home"><img width="1087" height="290" src="/wp-content/uploads/2022/05/tablem-logo2x.png" class="custom-logo" alt="Table M" decoding="async" srcset="/wp-content/uploads/2022/05/tablem-logo2x.png 1087w, /wp-content/uploads/2022/05/tablem-logo2x-300x80.png 300w, /wp-content/uploads/2022/05/tablem-logo2x-1024x273.png 1024w, /wp-content/uploads/2022/05/tablem-logo2x-768x205.png 768w, /wp-content/uploads/2022/05/tablem-logo2x-450x120.png 450w, /wp-content/uploads/2022/05/tablem-logo2x-800x213.png 800w" sizes="(max-width: 1087px) 100vw, 1087px" data-attachment-id="1764" data-permalink="http://muschenetz.com/tablem/tablem-logo2x/" data-orig-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/tablem-logo2x.png" data-orig-size="1087,290" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="tablem-logo2x" data-image-description="" data-image-caption="" data-medium-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/tablem-logo2x-300x80.png" data-large-file="http://muschenetz.com/tablem/wp-content/uploads/2022/05/tablem-logo2x-1024x273.png"></a>					</div>
+				
+							</div>
+
+		
+		<a href="/" rel="home">
+							<p class="site-title">Table M</p>
+					</a>
+
+		<p class="site-description site-description-text">FOOD x PHOTOGRAPHY</p>
+
+	</div>
+<!-- .c-branding -->
+
+</div>
+		</div>
+<!-- .c-navbar__zone -->
+
+	
+		<div class="c-navbar__zone c-navbar__zone--middle">
+					</div>
+<!-- .c-navbar__zone -->
+
+	
+		<div class="c-navbar__zone c-navbar__zone--right c-navbar__zone--push-right">
+			<nav class="menu-main-menu-container"><ul id="menu-1" class="menu  menu--primary">
+<li id="menu-item-1785" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1785"><a href="/about-2/">About</a></li>
+<li id="menu-item-1788" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1788"><a href="/category/food/entrees/">Entrees</a></li>
+<li id="menu-item-1789" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1789"><a href="/category/food/sides/">Sides</a></li>
+<li id="menu-item-1790" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1790"><a href="/category/food/beverages/">Beverages</a></li>
+<li id="menu-item-1791" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1791"><a href="/category/food/breakfasts/">Breakfasts</a></li>
+<li id="menu-item-1792" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1792"><a href="/category/food/desserts/">Desserts</a></li>
+<li id="menu-item-1793" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1793"><a href="/category/food/sauces/">Sauces</a></li>
+<li id="menu-item-1795" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1795"><a href="/category/food/soups/">Soups</a></li>
+</ul></nav>		</div>
+<!-- .c-navbar__zone -->
+
+	
+</div>
+<!-- .c-navbar__content -->
+
+				
+			</div>
+<!-- .c-navbar -->
+
+			
+		</div>
+<!-- .o-wrapper  .u-container-width -->
+	</div>
+<!-- .u-header-sides-spacing -->
+</header><!-- #masthead .site-header -->
+
+	
+	
+	<div id="content" class="site-content barba-container u-content-background">
+<div id="primary" class="content-area">
+<div id="main" class="site-main u-content-top-spacing u-content-bottom-spacing" role="main">
+<div class="u-header-background">
+<div class="u-container-sides-spacing">
+<div class="o-wrapper u-container-width">
+<header class="entry-header">
+
+<div><div class="cats"><a href="/category/food/" title="Food">Food</a></div></div>
+<h1 class="entry-title u-page-title-color">Hefeknödel</h1>
+<div class="header-meta">
+<span class="byline"> <span class="by">by</span> <span class="author vcard"><a class="url fn n" href="/author/admin/">admin</a></span></span><span class="posted-on"><a href="/food/hefeknodel/" rel="bookmark"><time class="entry-date published updated" datetime="2008-09-05T22:32:06+00:00">September 5, 2008</time></a></span>
+</div>
+
+
+</header>
+</div>
+</div>
+</div>
+<div class="u-container-sides-spacing">
+<div class="o-wrapper u-container-width">
+<div class="o-layout o-layout--blog">
+<div class="o-layout__main">
+
+
+<div class="entry-content  u-content-width">
+	<p><span class="leadin">Knödel are a form of boiled bread, wonderful as an accompaniment to a dish of chicken or beef with a creamy sauce. They are quite possibly one of the things Ingo likes to eat most in this world. You&#8217;ll want to start these approximately 3 hours before serving, or about the same time you start your other main course dishes if making on of the chicken or beef in sauce recipes found elsewhere on Table M.</span><br>
+[singlepic=4203,300,450]<br>
+<span id="more-139"></span></p>
+<h3>Yield</h3>
+<p>8 knödel</p>
+<h3>Ingredients</h3>
+<ul>
+<li>3 cups flour</li>
+<li>1 package active dry yeast</li>
+<li>1 egg, beaten</li>
+<li>1 cup stale bread, chopped into ¼ in cubes</li>
+<li>1 cup lukewarm milk (100-110 degrees)</li>
+<li>1 tsp sugar</li>
+</ul>
+<h3>Directions</h3>
+<p>Place flour in a large bowl, making an indent in the center. Mix together yeast, milk and sugar. Place in center of flour and let stand 10 minutes. Add egg and bread crumbs and mix until dough leaves the side of the bowl. It should be soft, but not too moist.</p>
+<p>Let rest 10 minutes (if using active yeast), or let rise normally if using normal yeast.</p>
+<p>Punch down (if necessary), and form into 8 balls. Place on cookie sheet, cover, and let rise until doubled in size.</p>
+<p>Bring a large pot of salted water to boil. Place knödel, 4 at a time, into the salted water and let cook 15 minutes.</p>
+<p>Remove from pot, drain and serve. Cut in half using a thread.</p>
+<div class="cats">
+<span class="cats__title">Categories</span><a href="/category/food/sides/" rel="category tag">Sides</a>
+</div>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-text sd-sharing">
+<h3 class="sd-title">Share this:</h3>
+<div class="sd-content"><ul>
+<li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-139" class="share-facebook sd-button no-icon" href="/food/hefeknodel/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li>
+<li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-139" class="share-twitter sd-button no-icon" href="/food/hefeknodel/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li>
+<li class="share-pinterest"><a rel="nofollow noopener noreferrer" data-shared="sharing-pinterest-139" class="share-pinterest sd-button no-icon" href="/food/hefeknodel/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span>Pinterest</span></a></li>
+<li class="share-end">
+</ul></div>
+</div></div>
+</div>
+<!-- .entry-content -->
+
+<footer class="entry-footer  u-content-width">
+	
+	<nav class="navigation post-navigation" aria-label="Post navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+<div class="nav-previous">
+<span class="nav-links__label  nav-links__label--previous">Previous article</span><span class="nav-title  nav-title--previous"><a href="/food/green-beans/" rel="prev">Green Beans</a></span>
+</div>
+<div class="nav-next">
+<span class="nav-links__label  nav-links__label--next">Next article</span><span class="nav-title  nav-title--next"><a href="/food/pita-chips/" rel="next">Pita Chips</a></span>
+</div>
+</div>
+	</nav>	</footer><!-- .entry-footer -->
+
+
+<div id="comments" class="comments-area  o-wrapper  u-container-width">
+	<div class="u-content-width">
+
+		<input type="checkbox" name="comments-toggle" id="comments-toggle" class="c-comments-toggle__checkbox" checked>
+		<label for="comments-toggle" class="c-comments-toggle__label">
+			<span class="c-comments-toggle__icon"><svg width="25px" height="20px" viewbox="0 0 25 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g id="comments-toggle-icon" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+		<path d="M1.3282837,0 C0.596100154,0 0,0.607743449 0,1.33672272 L0,14.6624951 C0,15.4004693 0.592962785,15.9992178 1.33612712,15.9992178 L4.01230308,15.9992178 L9.25288621,19.5952288 L10.0509545,15.9992178 L22.7216123,15.9992178 C23.4643845,15.9992178 24.0667594,15.3910833 24.0667594,14.6624951 L24.0667594,1.33672272 C24.0667594,0.598748533 23.4706592,0 22.7384757,0 L1.3282837,0 Z M1.33769581,1.33359406 L1.33769581,14.6656238 L4.70173997,14.6656238 L8.39677658,17.4626515 L8.97248384,14.6656238 L22.7290636,14.6656238 L22.7290636,1.33359406 L1.33769581,1.33359406 Z M17.3814177,9.33242081 C18.119876,9.33242081 18.7187214,8.73523661 18.7187214,7.99882675 C18.7187214,7.26241689 18.119876,6.66679703 17.3814177,6.66679703 C16.6429594,6.66679703 16.0441141,7.26241689 16.0441141,7.99882675 C16.0441141,8.73523661 16.6429594,9.33242081 17.3814177,9.33242081 Z M12.0333797,9.33242081 C12.771838,9.33242081 13.3706833,8.73523661 13.3706833,7.99882675 C13.3706833,7.26241689 12.771838,6.66679703 12.0333797,6.66679703 C11.2949214,6.66679703 10.6960761,7.26241689 10.6960761,7.99882675 C10.6960761,8.73523661 11.2949214,9.33242081 12.0333797,9.33242081 Z M6.68534166,9.33242081 C7.42379995,9.33242081 8.0226453,8.73523661 8.0226453,7.99882675 C8.0226453,7.26241689 7.42379995,6.66679703 6.68534166,6.66679703 C5.94688338,6.66679703 5.34803803,7.26241689 5.34803803,7.99882675 C5.34803803,8.73523661 5.94688338,9.33242081 6.68534166,9.33242081 Z" id="icon"></path>
+	</g>
+</svg>
+</span>
+			<span class="c-comments-toggle__text">
+			0 comments				</span>
+		</label>
+
+		
+		<div id="respond" class="comment-respond">
+							<h3 id="reply-title" class="comment-reply-title">Leave a Reply					<small><a rel="nofollow" id="cancel-comment-reply-link" href="/food/hefeknodel/#respond" style="display:none;">Cancel reply</a></small>
+				</h3>
+						<form id="commentform" class="comment-form">
+				<iframe title="Comment Form" src="https://jetpack.wordpress.com/jetpack-comment/?blogid=206243474&#038;postid=139&#038;comment_registration=0&#038;require_name_email=1&#038;stc_enabled=0&#038;stb_enabled=0&#038;show_avatars=1&#038;avatar_default=mystery&#038;greeting=Leave+a+Reply&#038;jetpack_comments_nonce=b2b880b201&#038;greeting_reply=Leave+a+Reply+to+%25s&#038;color_scheme=light&#038;lang=en&#038;jetpack_version=12.3&#038;show_cookie_consent=10&#038;has_cookie_consent=0&#038;token_key=%3Bnormal%3B&#038;sig=91e9a0c6f26bd00d2c4b64e3bc7fd0db33b6e6d0#parent=%2Ffood%2Fhefeknodel%2F%3Fsimply_static_page%3D1045" name="jetpack_remote_comment" style="width:100%; height: 430px; border:0;" class="jetpack_remote_comment" id="jetpack_remote_comment" sandbox="allow-same-origin allow-top-navigation allow-scripts allow-forms allow-popups">
+									</iframe>
+									<!--[if !IE]><!-->
+					<script>document.addEventListener('DOMContentLoaded', function () {
+							var commentForms = document.getElementsByClassName('jetpack_remote_comment');
+							for (var i = 0; i < commentForms.length; i++) {
+								commentForms[i].allowTransparency = false;
+								commentForms[i].scrolling = 'no';
+							}
+						});</script>
+					<!--<![endif]-->
+							</form>
+		</div>
+
+		
+		<input type="hidden" name="comment_parent" id="comment_parent" value="">
+
+		
+	</div>
+<!-- .comments-area__wrapper -->
+
+</div>
+<!-- #comments -->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	
+	
+<footer class="site-footer u-footer-background u-container-sides-spacing">
+	<div class="o-wrapper u-container-width">
+
+		
+		
+<div class="c-footer  u-footer-top-spacing  u-footer-bottom-spacing">
+
+	
+		<div class="c-footer__zone c-footer__zone--bottom">
+
+			<span class="c-footer__credits"><a href="http://wordpress.org/">Proudly powered by WordPress</a> | Theme: Julia Lite by <a href="https://pixelgrade.com/?utm_source=julia-lite-clients&#038;utm_medium=footer&#038;utm_campaign=julia-lite" title="The Pixelgrade Website" rel="nofollow">Pixelgrade</a></span>
+
+		</div>
+<!-- .c-footer__zone -->
+
+	
+</div>
+<!-- .c-footer -->
+
+			</div>
+<!-- .o-wrapper.u-container-width.content-area -->
+</footer>
+
+	
+	<span class="u-hidden  js-menu-mobile-label">Menu</span>
+
+	<div class="c-border"></div>
+
+	
+</div>
+<!-- .barba-container -->
+
+
+<div class="c-border"></div>
+<div class="c-cursor"></div>
+
+
+	<script type="text/javascript">window.WPCOM_sharing_counts = {"http:\/\/muschenetz.com\/tablem\/food\/hefeknodel\/":139};</script>
+						<style id="core-block-supports-inline-css" type="text/css">/**
+ * Core styles: block-supports
+ */</style>
+<script type="text/javascript" src="/wp-includes/js/imagesloaded.min.js?ver=4.1.4" id="imagesloaded-js"></script>
+<script type="text/javascript" src="/wp-includes/js/masonry.min.js?ver=4.2.2" id="masonry-js"></script>
+<script type="text/javascript" src="/wp-includes/js/hoverIntent.js?ver=1.10.2" id="hoverIntent-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/assets/js/TweenMax.min.js?ver=2.0.2" id="tweenmax-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/assets/js/select2.js?ver=4.0.5" id="select2-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/assets/js/slick.js?ver=1.9.0" id="slick-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/assets/js/scripts.js?ver=1.2.3" id="julia-scripts-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/components/blog/js/navigation.js?ver=20180101" id="pixelgrade-navigation-js"></script>
+<script type="text/javascript" src="/wp-content/themes/julia-lite/components/blog/js/skip-link-focus-fix.js?ver=20180101" id="pixelgrade-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.js?ver=6.2.2" id="comment-reply-js"></script>
+<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1690057088" id="akismet-frontend-js"></script>
+<script type="text/javascript" id="sharing-js-js-extra">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=12.3" id="sharing-js-js"></script>
+<script type="text/javascript" id="sharing-js-js-after">var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-twitter' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-twitter' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+						return false;
+					}
+				} );
+			} )();</script>
+
+		<!--[if IE]>
+		<script type="text/javascript">
+			if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+				// window.location.reload() doesn't respect the Hash in IE
+				window.location.hash = window.location.hash;
+			}
+		</script>
+		<![endif]-->
+		<script type="text/javascript">(function () {
+				var comm_par_el = document.getElementById( 'comment_parent' ),
+					comm_par = ( comm_par_el && comm_par_el.value ) ? comm_par_el.value : '',
+					frame = document.getElementById( 'jetpack_remote_comment' ),
+					tellFrameNewParent;
+
+				tellFrameNewParent = function () {
+					if ( comm_par ) {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=206243474&postid=139&comment_registration=0&require_name_email=1&stc_enabled=0&stb_enabled=0&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&jetpack_comments_nonce=b2b880b201&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en&jetpack_version=12.3&show_cookie_consent=10&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=91e9a0c6f26bd00d2c4b64e3bc7fd0db33b6e6d0#parent=%2Ffood%2Fhefeknodel%2F%3Fsimply_static_page%3D1045" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+					} else {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=206243474&postid=139&comment_registration=0&require_name_email=1&stc_enabled=0&stb_enabled=0&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&jetpack_comments_nonce=b2b880b201&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en&jetpack_version=12.3&show_cookie_consent=10&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=91e9a0c6f26bd00d2c4b64e3bc7fd0db33b6e6d0#parent=%2Ffood%2Fhefeknodel%2F%3Fsimply_static_page%3D1045";
+					}
+				};
+
+				
+				if ( 'undefined' !== typeof addComment ) {
+					addComment._Jetpack_moveForm = addComment.moveForm;
+
+					addComment.moveForm = function ( commId, parentId, respondId, postId ) {
+						var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ),
+							cancelClick, cancel;
+
+						if ( false === returnValue ) {
+							cancel = document.getElementById( 'cancel-comment-reply-link' );
+							cancelClick = cancel.onclick;
+							cancel.onclick = function () {
+								var cancelReturn = cancelClick.call( this );
+								if ( false !== cancelReturn ) {
+									return cancelReturn;
+								}
+
+								if ( ! comm_par ) {
+									return cancelReturn;
+								}
+
+								comm_par = 0;
+
+								tellFrameNewParent();
+
+								return cancelReturn;
+							};
+						}
+
+						if ( comm_par == parentId ) {
+							return returnValue;
+						}
+
+						comm_par = parentId;
+
+						tellFrameNewParent();
+
+						return returnValue;
+					};
+				}
+
+				
+				// Do the post message bit after the dom has loaded.
+				document.addEventListener( 'DOMContentLoaded', function () {
+					var iframe_url = "https:\/\/jetpack.wordpress.com";
+					if ( window.postMessage ) {
+						if ( document.addEventListener ) {
+							window.addEventListener( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								frame.style.height = event.data + 'px';
+							});
+						} else if ( document.attachEvent ) {
+							window.attachEvent( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								frame.style.height = event.data + 'px';
+							});
+						}
+					}
+				})
+
+			})();</script>
+
+		
+</div>
+<!-- #barba-wrapper -->
+
+
+</body>
+
+
+<!-- Dynamic page generated in 0.144 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2023-07-22 20:37:50 -->
+</html>

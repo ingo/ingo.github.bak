@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Stuffed Bell Peppers	</title>
+	<atom:link href="/food/stuffed-bell-peppers/feed/" rel="self" type="application/rss+xml" />
+	<link>/food/stuffed-bell-peppers/</link>
+	<description>FOOD x PHOTOGRAPHY</description>
+	<lastBuildDate>Tue, 10 May 2022 01:18:22 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>
+		By: Ольга		</title>
+		<link>/food/stuffed-bell-peppers/#comment-23</link>
+
+		<dc:creator><![CDATA[Ольга]]></dc:creator>
+		<pubDate>Sun, 26 Jul 2009 19:52:12 +0000</pubDate>
+		<guid isPermaLink="false">http://www.muschenetz.com/tablem/?p=247#comment-23</guid>
+
+					<description><![CDATA[Рада вспомнить все что Вы готовили тут в Украине и часто угощали меня, школьницу. 
+
+Искала в I-netе Анечку, нашла возможность связаться с Вами.
+
+По возможности, передайте Ане мой e-mail.
+
+Заранее благодарна.
+
+Оля Борисенко (Дмитриева)]]></description>
+			<content:encoded><![CDATA[<p>Рада вспомнить все что Вы готовили тут в Украине и часто угощали меня, школьницу. </p>
+<p>Искала в I-netе Анечку, нашла возможность связаться с Вами.</p>
+<p>По возможности, передайте Ане мой e-mail.</p>
+<p>Заранее благодарна.</p>
+<p>Оля Борисенко (Дмитриева)</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

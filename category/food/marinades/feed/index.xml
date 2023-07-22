@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Marinades and Rubs &#8211; Table M</title>
+	<atom:link href="/category/food/marinades/feed/" rel="self" type="application/rss+xml" />
+	<link></link>
+	<description>FOOD x PHOTOGRAPHY</description>
+	<lastBuildDate>Sat, 06 Sep 2008 06:17:06 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>Turkish Onion Marinade</title>
+		<link>/food/turkish-onion-marinade/</link>
+					<comments>/food/turkish-onion-marinade/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 06 Sep 2008 06:17:06 +0000</pubDate>
+				<category><![CDATA[Food]]></category>
+		<category><![CDATA[Marinades and Rubs]]></category>
+		<guid isPermaLink="false">http://www.muschenetz.com/tablem/?p=173</guid>
+
+					<description><![CDATA[Olive oil, onions and cinnamon are an unusual combination for an American marinade, but they provide a great background flavor without being overpowering. This marinade..]]></description>
+										<content:encoded><![CDATA[<p><span class="leadin">Olive oil, onions and cinnamon are an unusual combination for an American marinade, but they provide a great background flavor without being overpowering. This marinade is inspired by one in Claudia Roden&#8217;s The New Book of Middle Eastern Food. These flavors are very good on chicken, but would work equally well with lamb.</span><br />
+<span id="more-173"></span><br />
+[singlepic=4407,300,450]</p>
+<h3>Yield</h3>
+<p>2 cups, enough for 3-4 pounds of meat.</p>
+<h3>Ingredients</h3>
+<ul>
+<li>1 onion (sweet or Vidalia onions preferred)</li>
+<li>4 tbsp. olive oil</li>
+<li>1 tsp. ground cinnamon</li>
+<li>1 tsp. salt</li>
+<li>pepper</li>
+</ul>
+<h3>Directions</h3>
+<p>Chop onion into quarters. Liquefy all ingredients in a food processor. Pour over meat. It is recommended you marinade for no less than one hour, but no more than overnight.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/food/turkish-onion-marinade/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

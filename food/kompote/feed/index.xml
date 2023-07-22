@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Kompote	</title>
+	<atom:link href="/food/kompote/feed/" rel="self" type="application/rss+xml" />
+	<link>/food/kompote/</link>
+	<description>FOOD x PHOTOGRAPHY</description>
+	<lastBuildDate>Tue, 10 May 2022 01:15:38 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>
+		By: ingo		</title>
+		<link>/food/kompote/#comment-25</link>
+
+		<dc:creator><![CDATA[ingo]]></dc:creator>
+		<pubDate>Wed, 15 Jul 2009 01:57:46 +0000</pubDate>
+		<guid isPermaLink="false">http://www.muschenetz.com/tablem/?p=253#comment-25</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/food/kompote/#comment-24&quot;&gt;Kristen&lt;/a&gt;.
+
+Hi Kristen...kompote seems to keep about a week or so, but frankly, we&#039;ve always finished it sooner than that. I think it would still be okay after a week, but the fruit might start fermenting.]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/food/kompote/#comment-24">Kristen</a>.</p>
+<p>Hi Kristen&#8230;kompote seems to keep about a week or so, but frankly, we&#8217;ve always finished it sooner than that. I think it would still be okay after a week, but the fruit might start fermenting.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Kristen		</title>
+		<link>/food/kompote/#comment-24</link>
+
+		<dc:creator><![CDATA[Kristen]]></dc:creator>
+		<pubDate>Sun, 12 Jul 2009 04:14:14 +0000</pubDate>
+		<guid isPermaLink="false">http://www.muschenetz.com/tablem/?p=253#comment-24</guid>
+
+					<description><![CDATA[It has been so long since I had Kompote--I had forgotten just how good it was until I came across your recipe and it jogged my memory.  I&#039;ll definately be trying this recipe out, but I did have a question: how long does it keep for?  Can I store it indefinately?  Or does it have a distinct shelf-life?]]></description>
+			<content:encoded><![CDATA[<p>It has been so long since I had Kompote&#8211;I had forgotten just how good it was until I came across your recipe and it jogged my memory.  I&#8217;ll definately be trying this recipe out, but I did have a question: how long does it keep for?  Can I store it indefinately?  Or does it have a distinct shelf-life?</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

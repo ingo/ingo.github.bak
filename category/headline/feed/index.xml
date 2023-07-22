@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Headline &#8211; Table M</title>
+	<atom:link href="/category/headline/feed/" rel="self" type="application/rss+xml" />
+	<link></link>
+	<description>FOOD x PHOTOGRAPHY</description>
+	<lastBuildDate>Thu, 04 Sep 2008 05:50:56 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>Fig, Blue Cheese and Caramelized Onion Pizza</title>
+		<link>/food/fig-blue-cheese-and-caramelized-onion-pizza/</link>
+					<comments>/food/fig-blue-cheese-and-caramelized-onion-pizza/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 04 Sep 2008 05:50:56 +0000</pubDate>
+				<category><![CDATA[Food]]></category>
+		<category><![CDATA[Headline]]></category>
+		<category><![CDATA[Pizza]]></category>
+		<guid isPermaLink="false">http://www.muschenetz.com/wordpress/?p=3</guid>
+
+					<description><![CDATA[A pizza inspired by a lunch at the Cheese Board Collective in Berkeley. The figs and blue cheese make a lovely combination. [singlepic=1,300,450] Yield 6..]]></description>
+										<content:encoded><![CDATA[<p><span class="leadin">A pizza inspired by a lunch at the <a href="http://cheeseboardcollective.coop/">Cheese Board Collective</a> in Berkeley. The figs and blue cheese make a lovely combination.</span><br />
+<span id="more-1604"></span><br />
+[singlepic=1,300,450]</p>
+<h3>Yield</h3>
+<p>6 small slices (2 servings)</p>
+<h3>Ingredients</h3>
+<ul>
+<li>1/2 recipe Pizza Dough</li>
+<li>6 black mission figs, cut crosswise into thin rounds</li>
+<li>Caramelized Onions (see below)</li>
+<li>1 cup shredded mozzarella cheese</li>
+<li>1/4 cup blue cheese, crumbled</li>
+</ul>
+<h3>Caramelized Onions</h3>
+<ul>
+<li>1 medium yellow onion, sliced thinly into rings</li>
+<li>1 tsp olive oil</li>
+<li>salt</li>
+</ul>
+<h3>Garlic Alfredo Sauce</h3>
+<ul>
+<li>2 tbsp. butter</li>
+<li>1/2 cup heavy cream</li>
+<li>1 cup shredded Parmesan cheese</li>
+<li>1 clove garlic, minced</li>
+<li>salt</li>
+<li>pepper (white preferred)</li>
+</ul>
+<h3>Directions</h3>
+<p>Place a baking stone in the oven on the lowest shelf. Heat the oven to 500 degrees.</p>
+<p>To make the garlic Alfredo sauce, heat the butter in a medium saucepan. When melted, add the cream and garlic, and simmer until thickened slightly. Remove from heat, and stir in the cheese. Season with salt and pepper. Cover to keep warm and set aside.</p>
+<p>To caramelize the onions, heat the olive oil in a saute pan over low heat. Add the onions and salt, and saute slowly, until the onions turn golden. Remove from heat and set aside.</p>
+<p>To assemble the pizza, spread the pizza dough out into a round approximately 12-14&#8243; in diameter on a well-floured pizza peel. Coat the surface with the Alfredo sauce, leaving a half-inch ring around the edge. You may have some sauce left over and this can be reserved for another use.</p>
+<p>Sprinkle the top of the pizza with the caramelized onions, distributing them equally. Cover with the mozzarella cheese, and then sprinkle with blue cheese. Evenly distribute the fig slices over the pizza top.</p>
+<p>Slide the pizza onto the baking stone and bake 5-10 minutes, or until the crust has turned golden in spots. You can confirm the pizza is done if tapping on the bottom sounds hollow.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/food/fig-blue-cheese-and-caramelized-onion-pizza/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

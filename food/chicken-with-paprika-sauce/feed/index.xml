@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Chicken with Paprika Sauce	</title>
+	<atom:link href="/food/chicken-with-paprika-sauce/feed/" rel="self" type="application/rss+xml" />
+	<link>/food/chicken-with-paprika-sauce/</link>
+	<description>FOOD x PHOTOGRAPHY</description>
+	<lastBuildDate>Wed, 23 Dec 2015 20:36:04 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>
+		By: Gabriel		</title>
+		<link>/food/chicken-with-paprika-sauce/#comment-5</link>
+
+		<dc:creator><![CDATA[Gabriel]]></dc:creator>
+		<pubDate>Wed, 23 Dec 2015 20:36:04 +0000</pubDate>
+		<guid isPermaLink="false">http://www.muschenetz.com/tablem/?p=70#comment-5</guid>
+
+					<description><![CDATA[I&#039;m going to have to try this seasoning, it sonuds good! I made your  apple cinnamon omelette&#039; the other day except I used pears instead, did a blog post about it  Btw I had no idea crossfit was becoming a thing back in Australia, I&#039;d never even heard of crossfit until I came to the U.S. I&#039;ve noticed that a lot of Paleo folk do crossfit.]]></description>
+			<content:encoded><![CDATA[<p>I&#8217;m going to have to try this seasoning, it sonuds good! I made your  apple cinnamon omelette&#8217; the other day except I used pears instead, did a blog post about it  Btw I had no idea crossfit was becoming a thing back in Australia, I&#8217;d never even heard of crossfit until I came to the U.S. I&#8217;ve noticed that a lot of Paleo folk do crossfit.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

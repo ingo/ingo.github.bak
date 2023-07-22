@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Photography &#8211; Table M</title>
+	<atom:link href="/category/photography/feed/" rel="self" type="application/rss+xml" />
+	<link></link>
+	<description>FOOD x PHOTOGRAPHY</description>
+	<lastBuildDate>Thu, 04 Sep 2008 06:03:53 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>Slow Food San Francisco</title>
+		<link>/food/slow-food-san-francisco/</link>
+					<comments>/food/slow-food-san-francisco/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 04 Sep 2008 06:03:53 +0000</pubDate>
+				<category><![CDATA[Food]]></category>
+		<category><![CDATA[Photography]]></category>
+		<guid isPermaLink="false">http://www.muschenetz.com/wordpress/?p=26</guid>
+
+					<description><![CDATA[On a Sunday evening, Ingo had the opportunity to go over to the Slow Food tasting pavilions at Fort Mason center. It was quite an..]]></description>
+										<content:encoded><![CDATA[<p>On a Sunday evening, Ingo had the opportunity to go over to the Slow Food tasting pavilions at Fort Mason center. It was quite an experience. What a contrast to the Robogames, held a few months earlier in the same location. There was plenty of interesting food on hand. Below is just a sampling of what Ingo had the chance to taste.<br />
+</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/food/slow-food-san-francisco/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

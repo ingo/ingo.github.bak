@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Salad &#8211; Table M</title>
+	<atom:link href="/category/food/salad/feed/" rel="self" type="application/rss+xml" />
+	<link></link>
+	<description>FOOD x PHOTOGRAPHY</description>
+	<lastBuildDate>Mon, 09 May 2022 04:18:56 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.2.2</generator>
+	<item>
+		<title>Black Sesame Summer Dressing</title>
+		<link>/food/black-sesame-summer-dressing/</link>
+					<comments>/food/black-sesame-summer-dressing/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 07 May 2022 23:09:11 +0000</pubDate>
+				<category><![CDATA[Food]]></category>
+		<category><![CDATA[Salad]]></category>
+		<guid isPermaLink="false">http://www.muschenetz.com/tablem/?p=307</guid>
+
+					<description><![CDATA[This is a light, Asian influenced salad dressing. It works equally well spilled onto a simple bed of lettuce leaves, or a more complex salad...]]></description>
+										<content:encoded><![CDATA[
+<p><span class="leadin">This is a light, Asian influenced salad dressing. It works equally well spilled onto a simple bed of lettuce leaves, or a more complex salad. Salad lettuces are especially fresh and abundant in the summer &#8211;thus the name.</span></p>
+
+
+
+<div class="hrecipe h-recipe jetpack-recipe" itemscope itemtype="https://schema.org/Recipe"><h3 class="p-name jetpack-recipe-title fn" itemprop="name">Black Sesame Summer Dressing</h3><ul class="jetpack-recipe-meta"><li class="jetpack-recipe-servings p-yield yield" itemprop="recipeYield"><strong>Servings: </strong>1 cup</li><li class="jetpack-recipe-print"><a href="#">Print</a></li></ul><div class="jetpack-recipe-content"></p>
+
+
+
+<p>This dressing works well on a very simple salad, like the Boston lettuce shown here.</p>
+
+
+
+<p><div class="jetpack-recipe-ingredients"><h4 class="jetpack-recipe-ingredients-title">Ingredients</h4></p>
+
+
+
+<ul><li>1 shallot</li><li>1/3 cup seasoned rice vinegar</li><li>2/3 cup seasoned canola oil</li><li>1 tsp. toasted sesame oil</li><li>1 tbsp. black sesame seeds</li><li>salt</li><li>pepper</li></ul>
+
+
+
+<p></div></p>
+
+
+
+<p><div class="jetpack-recipe-directions e-instructions"><h4 class="jetpack-recipe-directions-title">Directions</h4></p>
+
+
+
+<ol><li>Peel and mince the shallot and place in the bottom of a large bowl.</li><li>Add rice vinegar and let site 10 minutes.</li><li>Whisk in oils until emulsified, and then add sesame seeds. Season to taste with salt and pepper. </li></ol>
+
+
+
+<p></div></p>
+
+
+
+<p></div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/food/black-sesame-summer-dressing/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Cucumber Salad With Caraway Seeds</title>
+		<link>/food/cucumber-salad-with-caraway-seeds/</link>
+					<comments>/food/cucumber-salad-with-caraway-seeds/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 06 Sep 2008 06:23:51 +0000</pubDate>
+				<category><![CDATA[Food]]></category>
+		<category><![CDATA[Salad]]></category>
+		<guid isPermaLink="false">http://www.muschenetz.com/tablem/?p=181</guid>
+
+					<description><![CDATA[A very simple, very German salad. Great with spicy foods. [singlepic=4193,300,450] Yield 2 cups Ingredients 2-3 cucumbers Kosher salt Sugar Distilled vinegar Pepper Caraway seeds..]]></description>
+										<content:encoded><![CDATA[<p><span class="leadin">A very simple, very German salad. Great with spicy foods.</span><br />
+<span id="more-1609"></span><br />
+[singlepic=4193,300,450]</p>
+<h3>Yield</h3>
+<p>2 cups</p>
+<h3>Ingredients</h3>
+<ul>
+<li>2-3 cucumbers</li>
+<li>Kosher salt</li>
+<li>Sugar</li>
+<li>Distilled vinegar</li>
+<li>Pepper</li>
+<li>Caraway seeds (optional)</li>
+</ul>
+<h3>Directions</h3>
+<p>Peel the cucumbers. Slice wafer-thin using a mandoline. Place in a colander, spinkle with salt, mix, and leave to drain for at least an hour.</p>
+<p>Rinse briefly, drain. Place in bowl, and add sugar and vinegar (start with 1 tblsp vinegar, 1 tsp sugar, then modify to taste. Add pepper and caraway seeds (Jane doesn&#8217;t like them, but Ingo finds them indespensible, and they are typically German).</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/food/cucumber-salad-with-caraway-seeds/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
